@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Pizza</title>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Scalzini's Pizza</div>
+        <div class="nav-items">
+          <a href="index.html">Home</a>
+          <a href="menu.html">Menu</a>
+          <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <form id="orderForm">
+      <div id="pizzaContainer" class="pizzaContainer">
+        <h1>Order Pizza</h1>
+        <div class="pizza initial-pizza">
+		<img id="pizzaImage" src="" alt="Pizza Image" class = "pizzaImage">
+          <label for="pizzaType">Pizza Type:</label>
+          <select name="pizzaType[]" class="pizzaCombo" onchange="updatePizzaImage(this)">
+            <option value="Margherita">Margherita</option>
+            <option value="Pepperoni">Pepperoni</option>
+            <option value="Vegetarian">Vegetarian</option>
+            <option value="Hawaiian">Hawaiian</option>
+            <option value="BBQ Chicken">BBQ Chicken</option>
+          </select>
+
+          <label for="pizzaSize">Size:</label>
+          <select name="pizzaSize[]" class="sizeCombo">
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+          </select>
+
+          
+        </div>
+      </div>
+
+      <div id="totalPrice">
+        Total price will be confirmed before payment
+      </div>
+
+      
+
+
+      <button type="button" class="pButton" id="addPizzaButton">Add Pizza to cart</button>
+      <button class ="pButton" id="clearCartButton">Clear Cart</button>
+      
+      <button type="submit" class="subButton" id = "placeOrderButton">Place Order</button>
+    </form>
+
+    <script src="order.js"></script>
+</body>
+</html>
